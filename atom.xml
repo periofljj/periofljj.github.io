@@ -1,4 +1,28 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>客户端存储小结 | Beauty of Dev.</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">客户端存储小结</h1><a id="logo" href="/.">Beauty of Dev.</a><p class="description">心有猛虎，细嗅蔷薇</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/timeline/"><i class="fa fa-user"> timeline</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">客户端存储小结</h1><div class="post-meta">Feb 16, 2017<span> | </span><span class="category"><a href="/categories/Technology/">Technology</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><a data-thread-key="2017/02/16/web-storage/" href="/2017/02/16/web-storage/#comments" class="ds-thread-count"></a><div class="post-content"><p>个人在工作和面试中常常遇到有关客户端存储的问题，于是系统性的总结如下，与各位共同进步。</p>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Beauty of Dev.</title>
+  <subtitle>心有猛虎，细嗅蔷薇</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://periofljj.github.io/"/>
+  <updated>2017-03-01T08:25:28.000Z</updated>
+  <id>http://periofljj.github.io/</id>
+  
+  <author>
+    <name>Peri Liang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>客户端存储小结</title>
+    <link href="http://periofljj.github.io/2017/02/16/web-storage/"/>
+    <id>http://periofljj.github.io/2017/02/16/web-storage/</id>
+    <published>2017-02-16T09:53:56.000Z</published>
+    <updated>2017-03-01T08:25:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>个人在工作和面试中常常遇到有关客户端存储的问题，于是系统性的总结如下，与各位共同进步。</p>
 <h3 id="客户端存储的意义"><a href="#客户端存储的意义" class="headerlink" title="客户端存储的意义"></a>客户端存储的意义</h3><p>Web应用允许使用浏览器提供的API实现将数据存储到用户的电脑上。这种客户端存储相当于赋予了Web浏览器记忆功能。比方说，Web应用就可以用这种方式来“记住”用户的偏好甚至是用户所有的状态信息，以便准确地”回忆“起用户上一次访问的位置。</p>
 <h3 id="客户端存储“同源策略”"><a href="#客户端存储“同源策略”" class="headerlink" title="客户端存储“同源策略”"></a>客户端存储“同源策略”</h3><p>不同站点的页面无法读取对方存储的数据，同一站点的不同页面可以互相共享存储数据，它为我们提供了一种通信机制。例如，一个页面上填写的表单数据可以显示在另外一个页面中。</p>
 <h3 id="客户端存储的有效期"><a href="#客户端存储的有效期" class="headerlink" title="客户端存储的有效期"></a>客户端存储的有效期</h3><p>Web应用可以选择它们存储数据的有效期：</p>
@@ -59,13 +83,64 @@
 <li>只适合存储少量文本数据</li>
 <li>任何以cookie形式存储的数据，不论服务器是否需要，每一次HTTP请求都会把这些数据传输到服务器端。</li>
 </ul>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://periofljj.github.io/2017/02/16/web-storage/" data-id="cizqov8xe0000b7rbc6wp4spf" class="article-share-link">Share</a><div class="tags"><a href="/tags/JavaScript/">JavaScript</a></div><div class="post-nav"><a href="/2017/01/05/hello-world/" class="next">H5实现移动端可视化数据报告开发笔记</a></div><div data-thread-key="2017/02/16/web-storage/" data-title="客户端存储小结" data-url="http://periofljj.github.io/2017/02/16/web-storage/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="2017/02/16/web-storage/" data-title="客户端存储小结" data-url="http://periofljj.github.io/2017/02/16/web-storage/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="http://periofljj.github.io"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/H5/" style="font-size: 15px;">H5</a> <a href="/tags/组件开发/" style="font-size: 15px;">组件开发</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/16/web-storage/">客户端存储小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/hello-world/">H5实现移动端可视化数据报告开发笔记</a></li></ul></div><div class="widget"><div class="comments-title"><i class="fa fa-comment-o"> Recent Comments</i></div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.linkedin.com/in/jingjing-liang-9252b7115" title="My Linkedin Page" target="_blank">My Linkedin Page</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Beauty of Dev..</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var duoshuoQuery = {short_name:'periofljj'};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;个人在工作和面试中常常遇到有关客户端存储的问题，于是系统性的总结如下，与各位共同进步。&lt;/p&gt;
+&lt;h3 id=&quot;客户端存储的意义&quot;&gt;&lt;a href=&quot;#客户端存储的意义&quot; class=&quot;headerlink&quot; title=&quot;客户端存储的意义&quot;&gt;&lt;/a&gt;客户端存储的意义&lt;/h
+    
+    </summary>
+    
+      <category term="Technology" scheme="http://periofljj.github.io/categories/Technology/"/>
+    
+    
+      <category term="JavaScript" scheme="http://periofljj.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>H5实现移动端可视化数据报告开发笔记</title>
+    <link href="http://periofljj.github.io/2017/01/05/hello-world/"/>
+    <id>http://periofljj.github.io/2017/01/05/hello-world/</id>
+    <published>2017-01-05T03:47:01.000Z</published>
+    <updated>2017-03-01T08:16:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近自己学习用H5实现移动端可视化数据报告，即通过H5和其他前端技术将数据通过图表组件（饼图、折线图等）的方式直观的呈现在用户眼前。整个过程，尤其是组件化开发思想让自己受益匪浅，以下是按照学习和开发的流程总结的要点以供参考。</p>
+<p><a href="https://github.com/periofljj/h5-dataVisualizationReport" target="_blank" rel="external">点击下载源代码</a></p>
+<h2 id="Web开发流程简析"><a href="#Web开发流程简析" class="headerlink" title="Web开发流程简析"></a>Web开发流程简析</h2><h3 id="开发前"><a href="#开发前" class="headerlink" title="开发前"></a>开发前</h3><p>要进行功能设计和视觉/交互设计。</p>
+<h3 id="开发中"><a href="#开发中" class="headerlink" title="开发中"></a>开发中</h3><ul>
+<li>必要的技术规划</li>
+<li>前端开发</li>
+<li>后端开发</li>
+</ul>
+<h3 id="开发后"><a href="#开发后" class="headerlink" title="开发后"></a>开发后</h3><p>测试、上线</p>
+<h2 id="前端开发要点总结"><a href="#前端开发要点总结" class="headerlink" title="前端开发要点总结"></a>前端开发要点总结</h2><h3 id="Step1-标注"><a href="#Step1-标注" class="headerlink" title="Step1.标注"></a>Step1.标注</h3><p><a href="http://www.getmarkman.com" target="_blank" rel="external">MarkMan</a> - 个人非常推荐的一款前端工程师切图标注工具。</p>
+<h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><ul>
+<li>首先要划分图片模块和文字区域模块。</li>
+<li>手机端UI设计元素尺寸一般都为偶数。因为移动端双倍分辨率下所有宽、高都必须是偶数，如果设计图不符合要求需要手动调整。</li>
+<li>一个模块的位置，即x轴和y轴，必须定义一个。</li>
+<li>移动端边距主要标注比例而不是具体的值。</li>
+<li>标注文本却与要考虑行高。</li>
+</ul>
+<h3 id="Step2-切图"><a href="#Step2-切图" class="headerlink" title="Step2.切图"></a>Step2.切图</h3><ul>
+<li>合并图层：<code>command</code> + <code>E</code> / 按住 <code>command</code> 鼠标变成选区模式。</li>
+<li>另存为web格式：<code>command</code>+<code>shift</code>+<code>alt</code>+<code>s</code>。如果元素有透明的背景，则需要存在png24格式。</li>
+</ul>
+<h3 id="Step3-项目类JS开发"><a href="#Step3-项目类JS开发" class="headerlink" title="Step3.项目类JS开发"></a>Step3.项目类JS开发</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近自己学习用H5实现移动端可视化数据报告，即通过H5和其他前端技术将数据通过图表组件（饼图、折线图等）的方式直观的呈现在用户眼前。整个过程，尤其是组件化开发思想让自己受益匪浅，以下是按照学习和开发的流程总结的要点以供参考。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://
+    
+    </summary>
+    
+    
+      <category term="H5" scheme="http://periofljj.github.io/tags/H5/"/>
+    
+      <category term="组件开发" scheme="http://periofljj.github.io/tags/%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+</feed>
