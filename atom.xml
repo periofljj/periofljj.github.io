@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-03-01T08:25:28.000Z</updated>
+  <updated>2017-03-20T10:58:24.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -14,6 +14,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程序媛数据结构与算法进阶（一）</title>
+    <link href="http://periofljj.github.io/2017/03/20/algorithm1/"/>
+    <id>http://periofljj.github.io/2017/03/20/algorithm1/</id>
+    <published>2017-03-20T06:27:34.000Z</published>
+    <updated>2017-03-20T10:58:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-复杂度分析"><a href="#1-复杂度分析" class="headerlink" title="1. 复杂度分析"></a>1. 复杂度分析</h2><h2 id="1-1-究竟什么是大O"><a href="#1-1-究竟什么是大O" class="headerlink" title="1.1 究竟什么是大O"></a>1.1 究竟什么是大O</h2><p>假设n表示数据规模，那么<strong>O(f(n))</strong> 的定义是——运行算法所需执行的指令数，和f(n)成正比，也代表算法执行的上界。即：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">时间复杂度</th>
+<th style="text-align:left">运行算法所需执行的指令数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">O($\log n$)</td>
+<td style="text-align:left">a * $\log n$</td>
+</tr>
+<tr>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">b * n</td>
+</tr>
+<tr>
+<td style="text-align:left">O(n$\log n$)</td>
+<td style="text-align:left">c * (n$\log n$)</td>
+</tr>
+<tr>
+<td style="text-align:left">O($n^2$)</td>
+<td style="text-align:left">d * $n^2$</td>
+</tr>
+</tbody>
+</table>
+<p>参考下图，当数据规模相同时，不同时间复杂度算法用时的比较。</p>
+<p><img src="/2017/03/20/algorithm1/timecompare.png" alt="图1-不同时间复杂度算法对比图"></p>
+<p>我们可以发现当数据规模小到一定程度时，时间复杂度高的算法也是有意义的。</p>
+<p>当数据规模相同的时候，假设O($n\log n$ + n)这个时间复杂度我们可以直接看做O($n\log n$),而O($n\log n$ + n^2)视为O(n^2)。因为我们只看f(n)表达式里作用最显著的部分。但是O($A\log A$ + B)不能简单的视为O($A\log A$ )，这是因为A、B是不同问题的规模。</p>
+<h3 id="例题1-1：有一个字符串数组，将数组中的每一个字符串按照字母序排列；之后再将整个字符串数组按照字典序排列。整个操作的时间复杂度。"><a href="#例题1-1：有一个字符串数组，将数组中的每一个字符串按照字母序排列；之后再将整个字符串数组按照字典序排列。整个操作的时间复杂度。" class="headerlink" title="例题1-1：有一个字符串数组，将数组中的每一个字符串按照字母序排列；之后再将整个字符串数组按照字典序排列。整个操作的时间复杂度。"></a>例题1-1：有一个字符串数组，将数组中的每一个字符串按照字母序排列；之后再将整个字符串数组按照字典序排列。整个操作的时间复杂度。</h3><p>答案：假设最长的字符串长度为s；数组中有n个字符串。对每个字符串排序：O($s\log s$),<br>遍历将数组中的每一个字符串按照字母序排序：O($n \times s\log s$).又有整形数组排序的时间复杂度为O（$n\log n$）,则对整个字符串数组按照字典序排序为O（$s \times n\log n$）.所以整个操作的时间复杂度为O($n \times s\log s$)+O（$s \times n\log n$）.</p>
+<h4 id="常见排序算法时间复杂度"><a href="#常见排序算法时间复杂度" class="headerlink" title="常见排序算法时间复杂度"></a>常见排序算法时间复杂度</h4><p><img src="/2017/03/20/algorithm1/sort-compare.png" alt="图2-各种排序的比较图"></p>
+<p>我们通常只需要关注一般情况就好。</p>
+<h2 id="1-2-对数据规模有个概念"><a href="#1-2-对数据规模有个概念" class="headerlink" title="1.2 对数据规模有个概念"></a>1.2 对数据规模有个概念</h2><p>如果想要在1s内解决问题，不同时间复杂度可处理级别的数据为下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">时间复杂度</th>
+<th style="text-align:left">数据规模</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">O($n^2$)</td>
+<td style="text-align:left">$10^4$</td>
+</tr>
+<tr>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">$10^8$</td>
+</tr>
+<tr>
+<td style="text-align:left">O($n\log n$)</td>
+<td style="text-align:left">$10^7$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-3-空间复杂度"><a href="#1-3-空间复杂度" class="headerlink" title="1.3 空间复杂度"></a>1.3 空间复杂度</h2><p>开了多大的辅助空间，就说用了多少空间复杂度。</p>
+<ul>
+<li>多开了一个辅助的数组：O(n)</li>
+<li>多开了一个辅助的二维数组：O($n^2$)</li>
+<li>多开了一块常数空间：O(1)</li>
+</ul>
+<h3 id="PS：递归的调用是有空间代价的。递归的深度是多少，空间复杂度就是多少。"><a href="#PS：递归的调用是有空间代价的。递归的深度是多少，空间复杂度就是多少。" class="headerlink" title="PS：递归的调用是有空间代价的。递归的深度是多少，空间复杂度就是多少。"></a>PS：递归的调用是有空间代价的。递归的深度是多少，空间复杂度就是多少。</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-复杂度分析&quot;&gt;&lt;a href=&quot;#1-复杂度分析&quot; class=&quot;headerlink&quot; title=&quot;1. 复杂度分析&quot;&gt;&lt;/a&gt;1. 复杂度分析&lt;/h2&gt;&lt;h2 id=&quot;1-1-究竟什么是大O&quot;&gt;&lt;a href=&quot;#1-1-究竟什么是大O&quot; class=&quot;
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://periofljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>客户端存储小结</title>
