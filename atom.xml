@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-07-20T07:50:24.000Z</updated>
+  <updated>2017-07-20T09:23:16.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://periofljj.github.io/2017/07/19/JavaScript%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BB%8B%E7%BB%8D/"/>
     <id>http://periofljj.github.io/2017/07/19/JavaScript函数式编程的介绍/</id>
     <published>2017-07-19T10:10:21.000Z</published>
-    <updated>2017-07-20T07:50:24.000Z</updated>
+    <updated>2017-07-20T09:23:16.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://opensource.com/article/17/6/functional-javascript" target="_blank" rel="external">原文链接</a></p>
 <p>1995年，当Brendan Eich着手创建<code>JavaScript</code>时，他本打算实现一个浏览器中的<code>Scheme</code>。<code>Scheme</code>，作为<code>Lisp</code>的方言，是一种函数式编程语言。但当被告知新的语言应当是一种<code>Java</code>相关的脚本语言后，他改变主意确立了一种具有C语言风格语法(就像<code>Java</code>)的语言,还支持<code>first-class function</code>(即函数可以被当做参数传递给其他的函数，作为其他函数的返回值，也可以被赋给变量)。Java直到version 8,才从技术上支持<code>first-class function</code>，当然你可以使用匿名类(anonymous classes)来模拟<code>first-class functions</code>。这些<code>first-class functions</code>使得函数式编程在<code>JavaScript</code>中成为可能。</p>
-<p><code>JavaScript</code>是一种多范式的语言，它允许你在编程中自由的混搭面向对象式，过程式和函数式的范式。最近，函数式编程的方式愈受青睐。在前端框架诸如<code>Angular</code>,<code>React</code>中，采用不变的数据结构能极大的优化性能。不变性是函数式编程的核心特性。它和纯函数使得你的代码更易于发现和调试错误。摒弃程序循环而采用函数能增加代码的可读性，并且让它看起来更加优雅。总的来说，函数式编程有很多的好处。</p>
+<p><code>JavaScript</code>是一种多范式的语言，它允许你在编程中自由的混搭面向对象式，过程式和函数式的范式。最近，函数式编程的方式愈受青睐。在前端框架诸如<code>Angular</code>,<code>React</code>中，采用不变的数据结构能极大的提升性能。不变性是函数式编程的核心特性。它和纯函数使得你的代码更易于发现和调试错误。摒弃程序循环而采用函数能增加代码的可读性，并且让它看起来更加优雅。总的来说，函数式编程有很多的好处。</p>
 <h3 id="什么不是函数式编程？"><a href="#什么不是函数式编程？" class="headerlink" title="什么不是函数式编程？"></a>什么不是函数式编程？</h3><p>在我们讨论函数式编程之前，应该先明确怎样不算是函数式编程。让我们谈谈在编写代码中你应该抛弃的语言结构:</p>
 <ul>
 <li><p><strong>Loops</strong></p>
@@ -97,7 +97,8 @@
 <h3 id="不可变性-Immutability"><a href="#不可变性-Immutability" class="headerlink" title="不可变性(Immutability)"></a>不可变性(Immutability)</h3><p>让我们回到捕获变量的概念上。上文中我们简单的讨论了 <strong>canRide()</strong> 函数。我们说它是一个非纯函数，因为变量 <strong>heightRequirement</strong> 允许被重新赋值。这里有个人为的例子来说明它是怎样由于被重新赋值而引起不可预测的后果的：</p>
 <p>重新强调一下捕获变量不一定会使一个函数不纯。我们可以重写 <strong>canRide()</strong> 函数，仅仅改变声明 <strong>heightRequirement</strong> 这个变量的方式，就能使其成为纯函数。</p>
 <p>用关键字 <strong>const</strong> 来声明变量意味着这是一个常量。如果尝试对它重新赋值，服务器会报错。所以可以使用 <strong>const</strong> 关键字来声明变量避免值被修改，但是这里仍然有个问题，对象可以被修改。为了实现真正的不可变性，不仅要避免变量被重新赋值，并且数据结构也要不可变。JavaScript提供给我们一个方法—— <strong>Object.freeze</strong> 来防止对象被改变。</p>
-<p>不可变性适用于所有的诗句结构，包括arrays, maps, sets。着意味着我们不能调用修改它们的方法，就像 <strong>array.protptype.push</strong> 。因为它能修改已经存在的数组。我们可以创建一个和原先数组完全一样的新数组来给它添加新的元素。</p>
+<p>不可变性适用于所有的数据结构，包括arrays, maps, sets。这意味着我们不应当去调用修改它们的方法，就像 <strong>array.protptype.push</strong> 。因为它能修改已经存在的数组。我们可以创建一个和原先数组完全一样的新数组用于添加新的元素。事实上，每个类似的修改对象元素的方法都可以被替换为一个函数，它返回一个已按需修改的全新数组。当我们在使用Map 或者Set的时候也是如此。</p>
+<p>如果你正在使用TypeScript编程，那么你可以使用 <strong>Readonly<t></t></strong>，<strong>ReadonlyArray<t></t></strong>，<strong>ReadonlyMap<k, v=""></k,></strong>，和 <strong>ReadonlySet<t></t></strong>。这样如果你试图修改任何的对象</p>
 ]]></content>
     
     <summary type="html">
