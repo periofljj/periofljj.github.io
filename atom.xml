@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-09-20T08:09:38.000Z</updated>
+  <updated>2017-09-20T08:21:43.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://periofljj.github.io/2017/07/19/JavaScript%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BB%8B%E7%BB%8D/"/>
     <id>http://periofljj.github.io/2017/07/19/JavaScript函数式编程的介绍/</id>
     <published>2017-07-19T10:10:21.000Z</published>
-    <updated>2017-09-20T08:09:38.000Z</updated>
+    <updated>2017-09-20T08:21:43.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://opensource.com/article/17/6/functional-javascript" target="_blank" rel="external">原文链接</a></p>
+    <content type="html"><![CDATA[<p><strong><em>最近在学习函数式编程相关的概念，自己尝试翻译了国外的一篇优秀技术文章，原文地址如下。如有好的建议，请尝试评论或者邮件跟我联系。</em></strong></p>
+<p><a href="https://opensource.com/article/17/6/functional-javascript" target="_blank" rel="external">原文链接</a></p>
 <p>1995年，当Brendan Eich着手创建<code>JavaScript</code>时，他本打算实现一个浏览器中的<code>Scheme</code>。<code>Scheme</code>，作为<code>Lisp</code>的方言，是一种函数式编程语言。但当被告知新的语言应当是一种<code>Java</code>相关的脚本语言后，他改变主意确立了一种具有C语言风格语法(就像<code>Java</code>)的语言,还支持<code>first-class function</code>(即函数可以被当做参数传递给其他的函数，作为其他函数的返回值，也可以被赋给变量)。Java直到version 8,才从技术上支持<code>first-class function</code>，当然你可以使用匿名类(anonymous classes)来模拟<code>first-class functions</code>。这些<code>first-class functions</code>使得函数式编程在<code>JavaScript</code>中成为可能。</p>
 <p><code>JavaScript</code>是一种多范式的语言，它允许你在编程中自由的混搭面向对象式，过程式和函数式的范式。最近，函数式编程的方式愈受青睐。在前端框架诸如<code>Angular</code>,<code>React</code>中，采用不变的数据结构能极大的提升性能。不变性是函数式编程的核心特性。它和纯函数使得你的代码更易于发现和调试错误。摒弃程序循环而采用函数能增加代码的可读性，并且让它看起来更加优雅。总的来说，函数式编程有很多的好处。</p>
 <h3 id="什么不是函数式编程？"><a href="#什么不是函数式编程？" class="headerlink" title="什么不是函数式编程？"></a>什么不是函数式编程？</h3><p>在我们讨论函数式编程之前，应该先明确怎样不算是函数式编程。让我们谈谈在编写代码中你应该抛弃的语言结构:</p>
@@ -113,8 +114,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://opensource.com/article/17/6/functional-javascript&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;1995年，当Brendan Eich着手创
+      &lt;p&gt;&lt;strong&gt;&lt;em&gt;最近在学习函数式编程相关的概念，自己尝试翻译了国外的一篇优秀技术文章，原文地址如下。如有好的建议，请尝试评论或者邮件跟我联系。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://opensource.com/article/
     
     </summary>
     
