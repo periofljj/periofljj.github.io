@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-09-20T08:21:43.000Z</updated>
+  <updated>2017-11-07T09:36:05.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你不知道的JavaScript读书笔记</title>
+    <link href="http://periofljj.github.io/2017/11/07/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://periofljj.github.io/2017/11/07/你不知道的JavaScript读书笔记/</id>
+    <published>2017-11-07T09:13:40.000Z</published>
+    <updated>2017-11-07T09:36:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>js中的作用域，指的是为了储存管理变量而定义的一套规则。</p>
+<p>js作为一种编译语言，它与一些传统的编译语言不通，并非是提前编译的。我们在提到“编译”这个行为的时候，通常有这样三个步骤。</p>
+<ol>
+<li>词法分析</li>
+<li>语法分析，生成抽象语法树</li>
+<li>生成可执行的代码</li>
+</ol>
+<p>在这个过程中有三个关键角色各司其职</p>
+<p><strong>引擎：</strong> 从头到尾负责整个编译的过程</p>
+<p><strong>编译器：</strong> 负责2.3步骤</p>
+<p><strong>作用域：</strong></p>
+<ol>
+<li>收集维护变量</li>
+<li>查找变量</li>
+<li>定义规则确定变量访问权限</li>
+</ol>
+<h4 id="那么在var-a-2这个简单的声明执行的过程中，它们又是如何配合工作的呢？"><a href="#那么在var-a-2这个简单的声明执行的过程中，它们又是如何配合工作的呢？" class="headerlink" title="那么在var a = 2这个简单的声明执行的过程中，它们又是如何配合工作的呢？"></a>那么在var a = 2这个简单的声明执行的过程中，它们又是如何配合工作的呢？</h4><p>1.编译器首先向作用域确认是否有这个变量存在于当前作用域集合中</p>
+<ul>
+<li>有，忽略</li>
+<li>没有，在当前作用于集合中创建这个变量</li>
+</ul>
+<p>2.编译器生成可执行的代码给引擎处理“赋值”这个动作。引擎在作用域中逐级查询这个变量（因为存在作用域嵌套）。</p>
+<ul>
+<li>找到，为它赋值</li>
+<li>没找到，抛出referenceError</li>
+</ul>
+<h5 id="顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）"><a href="#顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）" class="headerlink" title="顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）"></a>顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）</h5><h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p>闭包，作为js中很重要的概念，对其进行阐述。</p>
+<p><strong>将内部函数传递到所在的词法作用域之外，内部函数仍持有对原始定义作用域的引用。</strong></p>
+<p>例如：B函数嵌套在A函数内部，将B函数作为A函数的返回值。B函数持有对A函数作用域的引用，这个引用叫做闭包。并且A函数的作用域不会被垃圾回收，而是停留在内存中。</p>
+<p>“模块”是js利用闭包的一个很好的例子。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h4&gt;&lt;p&gt;js中的作用域，指的是为了储存管理变量而定义的一套规则。&lt;/p&gt;
+&lt;p&gt;js作为一种编译语言，它与一些传统的编译语言不通，并非是提前编译的。
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://periofljj.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>【译】JavaScript函数式编程的介绍</title>
