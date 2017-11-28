@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-11-07T09:36:05.000Z</updated>
+  <updated>2017-11-28T03:06:30.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -16,14 +16,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端面试</title>
+    <link href="http://periofljj.github.io/2017/11/28/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    <id>http://periofljj.github.io/2017/11/28/前端面试/</id>
+    <published>2017-11-28T02:37:03.000Z</published>
+    <updated>2017-11-28T03:06:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="第一部分：基础题"><a href="#第一部分：基础题" class="headerlink" title="第一部分：基础题"></a>第一部分：基础题</h3><h4 id="公共问题"><a href="#公共问题" class="headerlink" title="公共问题"></a>公共问题</h4><p>请简单自我介绍一下</p>
+<p>请介绍一些做过的项目</p>
+<p>平时如何学习前端技术</p>
+<hr>
+<h4 id="具体技术问题"><a href="#具体技术问题" class="headerlink" title="具体技术问题"></a>具体技术问题</h4><p>平时用git管理代码的流程，git merge和git rebase的区别</p>
+<p>用过jQuery，jQuery有几种类型的选择器？</p>
+<p>对原生javascript有没有了解：</p>
+<ol>
+<li>js基本的数据类型有哪些？其中null和undefine的区别</li>
+<li>对数组的操作，其中哪个方法既可以删除元素又可以修改元素(splice)</li>
+<li>原生js对dom的操作</li>
+<li>js函数声明的几种方式？区别？</li>
+<li>js事件冒泡为概念？事件委托的适用场景？</li>
+<li>作用域链</li>
+<li>是否了解闭包（配题）</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">n,o</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(o)</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">fun</span>:<span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> fun(m,n);</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = fun(<span class="number">0</span>);  a.fun(<span class="number">1</span>);  a.fun(<span class="number">2</span>);  a.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> b = fun(<span class="number">0</span>).fun(<span class="number">1</span>).fun(<span class="number">2</span>).fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> c = fun(<span class="number">0</span>).fun(<span class="number">1</span>);  c.fun(<span class="number">2</span>);  c.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="comment">//问:三行a,b,c的输出分别是什么？</span></div></pre></td></tr></table></figure>
+<p>用过bootstrap，是否了解栅格化？<br>除了bootstrap框架是否知道自己如何实现响应式布局？</p>
+<p>CSS</p>
+<ol>
+<li>解释盒子模型， box-sizing属性了解吗？</li>
+<li>块级元素和行内元素的区别</li>
+<li>水平居中的实现，垂直居中的实现(能说出几种实现方式)</li>
+<li>CSS3,HTML5的新特性</li>
+</ol>
+<p>HTTP</p>
+<ol>
+<li>常用状态码 401 403 200 500</li>
+<li>websocket协议</li>
+</ol>
+<p>简单编程题<br>实现布局，点击”联系我们”图片在控制台打印“你好星合”。<br><img src="/2017/11/28/前端面试/test.png" alt="图1-设计稿"></p>
+<hr>
+<h4 id="针对性问题"><a href="#针对性问题" class="headerlink" title="针对性问题"></a>针对性问题</h4><p>徐：</p>
+<ul>
+<li><p>提到了领导项目组进行原型设计和技术选型，进行原型设计和技术选型的时候如何思考的，都进行了哪些抉择？</p>
+</li>
+<li><p>小程序：提到了精简代码，有做过什么项目优化的尝试?（封装api,公用组件）</p>
+</li>
+</ul>
+<p>张：</p>
+<ul>
+<li>fullPage.js</li>
+</ul>
+<hr>
+<h3 id="第二部分：升级题目-如果第一部分回答的比较好再问"><a href="#第二部分：升级题目-如果第一部分回答的比较好再问" class="headerlink" title="第二部分：升级题目(如果第一部分回答的比较好再问)"></a>第二部分：升级题目(如果第一部分回答的比较好再问)</h3><p>AngularJs相关问题</p>
+<p>vue相关问题（双向绑定，状态管理），此处明星准备vue的问题</p>
+<p>输入输出题</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line"> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">1</span>); &#125;;</div><div class="line"> <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">2</span>);&#125;;</div><div class="line">Foo.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">3</span>);&#125;;</div><div class="line"><span class="keyword">var</span> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">4</span>);&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123; alert (<span class="number">5</span>);&#125;</div><div class="line"></div><div class="line"><span class="comment">//请写出以下输出结果：</span></div><div class="line">Foo.getName();</div><div class="line">getName();</div><div class="line">Foo().getName();</div><div class="line">getName();</div><div class="line"><span class="keyword">new</span> Foo.getName();</div><div class="line"><span class="keyword">new</span> Foo().getName();</div><div class="line"><span class="keyword">new</span> <span class="keyword">new</span> Foo().getName();</div></pre></td></tr></table></figure>
+<p>有些难度的编程题(待准备)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第一部分：基础题&quot;&gt;&lt;a href=&quot;#第一部分：基础题&quot; class=&quot;headerlink&quot; title=&quot;第一部分：基础题&quot;&gt;&lt;/a&gt;第一部分：基础题&lt;/h3&gt;&lt;h4 id=&quot;公共问题&quot;&gt;&lt;a href=&quot;#公共问题&quot; class=&quot;headerlink&quot; 
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://periofljj.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>你不知道的JavaScript读书笔记</title>
     <link href="http://periofljj.github.io/2017/11/07/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>http://periofljj.github.io/2017/11/07/你不知道的JavaScript读书笔记/</id>
     <published>2017-11-07T09:13:40.000Z</published>
-    <updated>2017-11-07T09:36:05.000Z</updated>
+    <updated>2017-11-17T06:03:54.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>js中的作用域，指的是为了储存管理变量而定义的一套规则。</p>
-<p>js作为一种编译语言，它与一些传统的编译语言不通，并非是提前编译的。我们在提到“编译”这个行为的时候，通常有这样三个步骤。</p>
+<p>js作为一种编译语言，它与一些传统的编译语言不同，并非是提前编译的。我们在提到“编译”这个行为的时候，通常有这样三个步骤。</p>
 <ol>
 <li>词法分析</li>
 <li>语法分析，生成抽象语法树</li>
@@ -40,24 +109,29 @@
 </ol>
 <h4 id="那么在var-a-2这个简单的声明执行的过程中，它们又是如何配合工作的呢？"><a href="#那么在var-a-2这个简单的声明执行的过程中，它们又是如何配合工作的呢？" class="headerlink" title="那么在var a = 2这个简单的声明执行的过程中，它们又是如何配合工作的呢？"></a>那么在var a = 2这个简单的声明执行的过程中，它们又是如何配合工作的呢？</h4><p>1.编译器首先向作用域确认是否有这个变量存在于当前作用域集合中</p>
 <ul>
-<li>有，忽略</li>
-<li>没有，在当前作用于集合中创建这个变量</li>
+<li>有，忽略。</li>
+<li>没有，在当前作用域集合中创建这个变量。</li>
 </ul>
-<p>2.编译器生成可执行的代码给引擎处理“赋值”这个动作。引擎在作用域中逐级查询这个变量（因为存在作用域嵌套）。</p>
+<p>2.编译器生成可执行的代码给引擎，用于处理“赋值”这个动作。引擎在作用域中逐级查询这个变量（因为存在作用域嵌套）。</p>
 <ul>
 <li>找到，为它赋值</li>
-<li>没找到，抛出referenceError</li>
+<li>没找到，抛出referenceError。</li>
 </ul>
-<h5 id="顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）"><a href="#顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）" class="headerlink" title="顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）"></a>顺便说明引擎查询有两类：LHS（赋值）与RHS（溯源）</h5><h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p>闭包，作为js中很重要的概念，对其进行阐述。</p>
+<h5 id="顺便说明引擎查询分为两类：LHS（赋值）与RHS（溯源）"><a href="#顺便说明引擎查询分为两类：LHS（赋值）与RHS（溯源）" class="headerlink" title="顺便说明引擎查询分为两类：LHS（赋值）与RHS（溯源）"></a>顺便说明引擎查询分为两类：LHS（赋值）与RHS（溯源）</h5><h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p>闭包，作为js中很重要的概念，对其进行阐述。</p>
 <p><strong>将内部函数传递到所在的词法作用域之外，内部函数仍持有对原始定义作用域的引用。</strong></p>
 <p>例如：B函数嵌套在A函数内部，将B函数作为A函数的返回值。B函数持有对A函数作用域的引用，这个引用叫做闭包。并且A函数的作用域不会被垃圾回收，而是停留在内存中。</p>
-<p>“模块”是js利用闭包的一个很好的例子。</p>
+<p><strong>模块</strong> 是js利用闭包的一个很好的例子。</p>
+<p>模块模式需要具备两个必要条件：</p>
+<ol>
+<li>必须有外部的封闭函数，该函数必须至少被调用一次(每次调用都会创建一个新的模块实例)。</li>
+<li>封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。</li>
+</ol>
 ]]></content>
     
     <summary type="html">
     
       &lt;h4 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h4&gt;&lt;p&gt;js中的作用域，指的是为了储存管理变量而定义的一套规则。&lt;/p&gt;
-&lt;p&gt;js作为一种编译语言，它与一些传统的编译语言不通，并非是提前编译的。
+&lt;p&gt;js作为一种编译语言，它与一些传统的编译语言不同，并非是提前编译的。
     
     </summary>
     
