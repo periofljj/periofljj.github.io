@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-11-28T03:40:08.000Z</updated>
+  <updated>2017-11-28T04:01:08.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://periofljj.github.io/2017/11/28/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
     <id>http://periofljj.github.io/2017/11/28/前端面试/</id>
     <published>2017-11-28T02:37:03.000Z</published>
-    <updated>2017-11-28T03:40:08.000Z</updated>
+    <updated>2017-11-28T04:01:08.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="第一部分：基础题"><a href="#第一部分：基础题" class="headerlink" title="第一部分：基础题"></a>第一部分：基础题</h3><h3 id="公共问题"><a href="#公共问题" class="headerlink" title="公共问题"></a>公共问题</h3><p>请简单自我介绍一下</p>
 <p>请介绍一些做过的项目</p>
@@ -58,6 +58,8 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">n,o</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(o)</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">fun</span>:<span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> fun(m,n);</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = fun(<span class="number">0</span>);  a.fun(<span class="number">1</span>);  a.fun(<span class="number">2</span>);  a.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> b = fun(<span class="number">0</span>).fun(<span class="number">1</span>).fun(<span class="number">2</span>).fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> c = fun(<span class="number">0</span>).fun(<span class="number">1</span>);  c.fun(<span class="number">2</span>);  c.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="comment">//问:三行a,b,c的输出分别是什么？</span></div></pre></td></tr></table></figure>
 <h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h4><p>ES6了解过吗,promise用过吗？promise是为了解决什么问题？</p>
 <h4 id="简单CSS编程题"><a href="#简单CSS编程题" class="headerlink" title="简单CSS编程题"></a>简单CSS编程题</h4><p>实现布局，点击”联系我们”图片在控制台打印“你好星合”。<br><img src="/2017/11/28/前端面试/test.png" alt="图1-设计稿"></p>
+<h4 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h4><p>已知函数式编程有两个必要特性：1.引用透明性：对于相同的输入永远都会返回同样的输出。2.没有任何可观察的副作用，也不依赖外部环境的状态。（这里的副作用包括但不限于：更改文件系统，往数据库插入记录，发送一个 http 请求，改变数据，打印/log，获取用户输入，DOM 查询，访问系统状态）。请解释下图?怎样对第一部分进行改造呢？</p>
+<p><img src="/2017/11/28/前端面试/think.png" alt="图2-函数式编程"></p>
 <hr>
 <h4 id="针对性问题"><a href="#针对性问题" class="headerlink" title="针对性问题"></a>针对性问题</h4><p>徐：</p>
 <ul>
