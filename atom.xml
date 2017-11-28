@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://periofljj.github.io/"/>
-  <updated>2017-11-28T03:06:30.000Z</updated>
+  <updated>2017-11-28T03:40:08.000Z</updated>
   <id>http://periofljj.github.io/</id>
   
   <author>
@@ -20,54 +20,61 @@
     <link href="http://periofljj.github.io/2017/11/28/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
     <id>http://periofljj.github.io/2017/11/28/前端面试/</id>
     <published>2017-11-28T02:37:03.000Z</published>
-    <updated>2017-11-28T03:06:30.000Z</updated>
+    <updated>2017-11-28T03:40:08.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="第一部分：基础题"><a href="#第一部分：基础题" class="headerlink" title="第一部分：基础题"></a>第一部分：基础题</h3><h4 id="公共问题"><a href="#公共问题" class="headerlink" title="公共问题"></a>公共问题</h4><p>请简单自我介绍一下</p>
+    <content type="html"><![CDATA[<h3 id="第一部分：基础题"><a href="#第一部分：基础题" class="headerlink" title="第一部分：基础题"></a>第一部分：基础题</h3><h3 id="公共问题"><a href="#公共问题" class="headerlink" title="公共问题"></a>公共问题</h3><p>请简单自我介绍一下</p>
 <p>请介绍一些做过的项目</p>
 <p>平时如何学习前端技术</p>
+<p>习惯用什么浏览器开发？平时怎么调试bugs？</p>
 <hr>
-<h4 id="具体技术问题"><a href="#具体技术问题" class="headerlink" title="具体技术问题"></a>具体技术问题</h4><p>平时用git管理代码的流程，git merge和git rebase的区别</p>
-<p>用过jQuery，jQuery有几种类型的选择器？</p>
-<p>对原生javascript有没有了解：</p>
-<ol>
-<li>js基本的数据类型有哪些？其中null和undefine的区别</li>
-<li>对数组的操作，其中哪个方法既可以删除元素又可以修改元素(splice)</li>
-<li>原生js对dom的操作</li>
-<li>js函数声明的几种方式？区别？</li>
-<li>js事件冒泡为概念？事件委托的适用场景？</li>
-<li>作用域链</li>
-<li>是否了解闭包（配题）</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">n,o</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(o)</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">fun</span>:<span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> fun(m,n);</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = fun(<span class="number">0</span>);  a.fun(<span class="number">1</span>);  a.fun(<span class="number">2</span>);  a.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> b = fun(<span class="number">0</span>).fun(<span class="number">1</span>).fun(<span class="number">2</span>).fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> c = fun(<span class="number">0</span>).fun(<span class="number">1</span>);  c.fun(<span class="number">2</span>);  c.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="comment">//问:三行a,b,c的输出分别是什么？</span></div></pre></td></tr></table></figure>
-<p>用过bootstrap，是否了解栅格化？<br>除了bootstrap框架是否知道自己如何实现响应式布局？</p>
-<p>CSS</p>
-<ol>
+<h3 id="具体技术问题"><a href="#具体技术问题" class="headerlink" title="具体技术问题"></a>具体技术问题</h3><h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ol>
 <li>解释盒子模型， box-sizing属性了解吗？</li>
 <li>块级元素和行内元素的区别</li>
 <li>水平居中的实现，垂直居中的实现(能说出几种实现方式)</li>
 <li>CSS3,HTML5的新特性</li>
 </ol>
-<p>HTTP</p>
-<ol>
-<li>常用状态码 401 403 200 500</li>
-<li>websocket协议</li>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><ol>
+<li>常用状态码 401 403 200 500 404 302</li>
 </ol>
-<p>简单编程题<br>实现布局，点击”联系我们”图片在控制台打印“你好星合”。<br><img src="/2017/11/28/前端面试/test.png" alt="图1-设计稿"></p>
+<h4 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h4><p>平时用git管理代码的流程，git merge和git rebase的区别</p>
+<h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><p>用过jQuery，jQuery有几种类型的选择器？</p>
+<p>用过bootstrap，是否了解栅格化？<br>除了bootstrap框架是否知道自己如何实现响应式布局？</p>
+<h4 id="原生javascript"><a href="#原生javascript" class="headerlink" title="原生javascript"></a>原生javascript</h4><ol>
+<li><p>js基本数据类型有哪些，其中undefine和null有区别吗？undefine === null?</p>
+</li>
+<li><p>原生js怎样判断一个对象是不是数组？在对数组的操作方法中，其中哪个方法既可以删除元素又可以替换、修改元素(splice)？</p>
+</li>
+<li><p>原生js对dom的操作</p>
+</li>
+<li><p>js函数声明的几种方式？区别？</p>
+</li>
+<li><p>js事件冒泡为概念？事件委托的适用场景？</p>
+</li>
+<li><p>作用域链</p>
+</li>
+<li><p>是否了解闭包（配题）</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">n,o</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(o)</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">fun</span>:<span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> fun(m,n);</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = fun(<span class="number">0</span>);  a.fun(<span class="number">1</span>);  a.fun(<span class="number">2</span>);  a.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> b = fun(<span class="number">0</span>).fun(<span class="number">1</span>).fun(<span class="number">2</span>).fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="keyword">var</span> c = fun(<span class="number">0</span>).fun(<span class="number">1</span>);  c.fun(<span class="number">2</span>);  c.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></div><div class="line"><span class="comment">//问:三行a,b,c的输出分别是什么？</span></div></pre></td></tr></table></figure>
+<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h4><p>ES6了解过吗,promise用过吗？promise是为了解决什么问题？</p>
+<h4 id="简单CSS编程题"><a href="#简单CSS编程题" class="headerlink" title="简单CSS编程题"></a>简单CSS编程题</h4><p>实现布局，点击”联系我们”图片在控制台打印“你好星合”。<br><img src="/2017/11/28/前端面试/test.png" alt="图1-设计稿"></p>
 <hr>
 <h4 id="针对性问题"><a href="#针对性问题" class="headerlink" title="针对性问题"></a>针对性问题</h4><p>徐：</p>
 <ul>
 <li><p>提到了领导项目组进行原型设计和技术选型，进行原型设计和技术选型的时候如何思考的，都进行了哪些抉择？</p>
 </li>
-<li><p>小程序：提到了精简代码，有做过什么项目优化的尝试?（封装api,公用组件）</p>
+<li><p>小程序：提到了精简代码，有做过什么项目优化的尝试?（封装api,公用组件），前后端是如何配合工作的？</p>
 </li>
 </ul>
 <p>张：</p>
 <ul>
-<li>fullPage.js</li>
+<li><p>Vue和AngularJs都使用过，能不能简单对比一下？</p>
+</li>
+<li><p>提到了前后端分离，平时是如何配合工作的？</p>
+</li>
 </ul>
 <hr>
-<h3 id="第二部分：升级题目-如果第一部分回答的比较好再问"><a href="#第二部分：升级题目-如果第一部分回答的比较好再问" class="headerlink" title="第二部分：升级题目(如果第一部分回答的比较好再问)"></a>第二部分：升级题目(如果第一部分回答的比较好再问)</h3><p>AngularJs相关问题</p>
-<p>vue相关问题（双向绑定，状态管理），此处明星准备vue的问题</p>
+<h3 id="第二部分：升级题目-如果第一部分回答的比较好再问"><a href="#第二部分：升级题目-如果第一部分回答的比较好再问" class="headerlink" title="第二部分：升级题目(如果第一部分回答的比较好再问)"></a>第二部分：升级题目(如果第一部分回答的比较好再问)</h3><p>vue相关问题（双向绑定，状态管理），此处明星准备vue的问题</p>
 <p>输入输出题</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line"> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">1</span>); &#125;;</div><div class="line"> <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">2</span>);&#125;;</div><div class="line">Foo.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">3</span>);&#125;;</div><div class="line"><span class="keyword">var</span> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert (<span class="number">4</span>);&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123; alert (<span class="number">5</span>);&#125;</div><div class="line"></div><div class="line"><span class="comment">//请写出以下输出结果：</span></div><div class="line">Foo.getName();</div><div class="line">getName();</div><div class="line">Foo().getName();</div><div class="line">getName();</div><div class="line"><span class="keyword">new</span> Foo.getName();</div><div class="line"><span class="keyword">new</span> Foo().getName();</div><div class="line"><span class="keyword">new</span> <span class="keyword">new</span> Foo().getName();</div></pre></td></tr></table></figure>
 <p>有些难度的编程题(待准备)</p>
@@ -75,7 +82,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;第一部分：基础题&quot;&gt;&lt;a href=&quot;#第一部分：基础题&quot; class=&quot;headerlink&quot; title=&quot;第一部分：基础题&quot;&gt;&lt;/a&gt;第一部分：基础题&lt;/h3&gt;&lt;h4 id=&quot;公共问题&quot;&gt;&lt;a href=&quot;#公共问题&quot; class=&quot;headerlink&quot; 
+      &lt;h3 id=&quot;第一部分：基础题&quot;&gt;&lt;a href=&quot;#第一部分：基础题&quot; class=&quot;headerlink&quot; title=&quot;第一部分：基础题&quot;&gt;&lt;/a&gt;第一部分：基础题&lt;/h3&gt;&lt;h3 id=&quot;公共问题&quot;&gt;&lt;a href=&quot;#公共问题&quot; class=&quot;headerlink&quot; 
     
     </summary>
     
